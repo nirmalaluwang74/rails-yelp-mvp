@@ -1,0 +1,19 @@
+<h1>Restaurants</h1>
+
+<div>
+  <div>
+    <% @restaurants.each do |restaurant| %>
+      <h3><%= restaurant.name %></h3>
+      <p><%= restaurant.address %> </p>
+      <p><%= restaurant.phone_number %> </p>
+      <p><%= restaurant.category %> </p>
+      <%= link_to 'Show restaurant', restaurant_path(restaurant.id) %>
+    <% end %>
+    
+  </div>
+</div>
+ 
+
+<%# <%= link_to 'New Restaurant', new_restaurant_path %> 
+
+<%# link_to 'text to the user', prefix_path(:id if there is one in the url) %>
